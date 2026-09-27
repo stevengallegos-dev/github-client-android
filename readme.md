@@ -1,55 +1,81 @@
-# Laboratorio Android. Cliente de GitHub
+# 📱 GitHub Client Android
 
-## Datos  del estudiante
-- Steven Gallegos 
-- Ingeniería de software 
+Aplicación Android desarrollada con **Kotlin y Jetpack Compose** que permite gestionar repositorios de GitHub mediante su **API REST**.
 
-## Descripción del Proyecto
-Este proyecto es un ejercicio de laboratorio para estudiantes donde se implementará una aplicación Android que simula un cliente de GitHub utilizando Jetpack Compose. La aplicación se centrará en la implementación de interfaces modernas y componentes declarativos, sin integración con la API REST de GitHub en esta fase.
+El proyecto fue realizado con fines académicos a partir de una base proporcionada por el docente y posteriormente ampliado con autenticación, consumo de API y funcionalidades para la gestión de repositorios.
 
-## Funcionalidades Principales
+## 👨‍💻 Autor
 
-### 1. Lista de Repositorios
-- Implementación de una `LazyColumn` para mostrar una lista de repositorios
-- Cada repositorio se mostrará en un `Composable` reutilizable
-- La lista será estática (hardcoded) para este ejercicio
-- Se implementará un diseño personalizado para cada ítem del repositorio usando Composables
+**Steven Gallegos**  
+Estudiante de Ingeniería de Software
 
-### 2. Formulario de Proyecto
-- Interfaz para ingresar datos de un nuevo proyecto usando Composables
-- Campos incluidos:
-  - Nombre del proyecto
-  - Descripción del proyecto
-- El formulario será únicamente visual (sin funcionalidad de guardado)
-- Uso de `TextField` o `OutlinedTextField` para la entrada de datos
+## 🚀 Funcionalidades
 
-## Objetivos de Aprendizaje
-- Implementación de `LazyColumn` en Jetpack Compose
-- Creación de funciones `@Composable` reutilizables
-- Diseño de interfaces declarativas con Compose
-- Estructuración de una aplicación Android moderna
-- Manejo de estado en Compose
-- Aplicación de Material Design 3 con Compose
+- Inicio de sesión mediante usuario y Personal Access Token de GitHub.
+- Consulta de repositorios desde la API de GitHub.
+- Creación de nuevos repositorios.
+- Edición de nombre y descripción.
+- Eliminación de repositorios con confirmación.
+- Actualización automática de la lista después de realizar operaciones.
+- Cierre de sesión.
+- Manejo de estados mediante ViewModel y StateFlow.
 
-## Notas Importantes
-- Este es un ejercicio de práctica enfocado en la UI con Jetpack Compose
-- No se implementará conexión con la API de GitHub
-- Los datos mostrados serán estáticos (hardcoded)
-- El formulario será solo para demostración de Composables
+## 🛠️ Tecnologías utilizadas
 
-## Composables Utilizados
-- `Text`: Para mostrar textos como nombres y descripciones de repositorios
-- `Column` y `Row`: Como contenedores para organizar los elementos de forma vertical u horizontal
-- `Image` o `AsyncImage`: Para mostrar avatares o iconos de repositorios
-- `TextField` / `OutlinedTextField`: Para la entrada de texto en el formulario de creación de proyecto
-- `LazyColumn`: Para mostrar listas eficientes de repositorios
-- `Card`: Para envolver cada ítem de repositorio con elevación y bordes
-- `Button`: Para acciones del usuario
-
-## Tecnologías Utilizadas
 - Kotlin
-- Android SDK
 - Jetpack Compose
-- Compose UI
-- Material Design 3 (Material You)
-- Navigation Compose (opcional)
+- Material Design 3
+- Retrofit
+- OkHttp
+- Gson
+- GitHub REST API
+- Coroutines
+- StateFlow
+- ViewModel
+- SharedPreferences
+- Gradle
+
+## 🔐 Autenticación
+
+La aplicación utiliza un **Personal Access Token (PAT)** para autenticar las solicitudes realizadas a GitHub.
+
+El token se ingresa desde la pantalla de inicio de sesión y se utiliza para autorizar las peticiones realizadas mediante Retrofit y OkHttp.
+
+> ⚠️ Los tokens de acceso son información privada y nunca deben publicarse dentro del repositorio.
+
+## 📱 Flujo principal
+
+```text
+Inicio de sesión
+       ↓
+Autenticación
+       ↓
+GitHub REST API
+       ↓
+Lista de repositorios
+       ↓
+Crear / Editar / Eliminar
+```
+
+## ⚙️ Ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/stevengallegos-dev/github-client-android.git
+```
+
+2. Abrir el proyecto en **Android Studio**.
+3. Esperar la sincronización de Gradle.
+4. Ejecutarlo en un emulador o dispositivo Android.
+5. Iniciar sesión con un usuario de GitHub y un Personal Access Token válido.
+
+## 🎓 Contexto académico
+
+El proyecto comenzó como un laboratorio enfocado en interfaces Android con **Jetpack Compose**.
+
+A partir de la base proporcionada por el docente, se ampliaron las funcionalidades para incorporar la integración con la **API REST de GitHub**, autenticación y operaciones de creación, edición y eliminación de repositorios.
+
+## 📌 Estado
+
+**Funcional** — permite autenticarse, consultar y gestionar repositorios de GitHub desde la aplicación Android.
